@@ -6,7 +6,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "stylelint \"**/*.css\" && eslint . && prettier . --check",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-fix": "stylelint \"**/*.css\" --fix && eslint . --fix && prettier . --write"
   },
   "devDependencies": {
     "eslint": "^8.6.0",
