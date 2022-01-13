@@ -7,9 +7,17 @@
     "preview": "vite preview",
     "lint": "stylelint \"**/*.css\" && eslint . && prettier . --check",
     "prepare": "husky install",
-    "lint-fix": "stylelint \"**/*.css\" --fix && eslint . --fix && prettier . --write"
+    "lint-fix": "stylelint \"**/*.css\" --fix && eslint . --fix && prettier . --write",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@storybook/addon-actions": "^6.4.12",
+    "@storybook/addon-essentials": "^6.4.12",
+    "@storybook/addon-links": "^6.4.12",
+    "@storybook/html": "^6.4.12",
+    "babel-loader": "^8.2.3",
     "eslint": "^8.6.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.7",
@@ -23,5 +31,8 @@
     "*.js": "eslint --cache --fix",
     "*.css": "stylelint --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "stylelint-selector-bem-pattern": "^2.1.1"
   }
 }
